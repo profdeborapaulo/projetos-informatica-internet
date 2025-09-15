@@ -1,656 +1,275 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&display=swap');
+/* Importação de fontes para um estilo gótico */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=UnifrakturCook:wght@700&display=swap');
 
 
+/* ESTILOS GERAIS DA PÁGINA */
 body {
-    background-image: url("img/background.png");
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: #f5f5f5;
     margin: 0;
-}
-
-.logo {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
-
-.logo img {
-    height: 450px;
-    width: auto;
-    align-items: center;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.titulo-biblioteca {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 90px;
-}
-
-.subtitulo-biblioteca {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.tela-inicial {
-    margin-top: 50px;
-}
-
-.linha {
-    margin-top: 165px;
-}
-
-.linha hr {
-    display: block;
-    border: 20px solid #C5A29E;
-    margin-top: 30px;
-}
-
-.mini-logo {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.mini-logo img {
-    height: 140px;
-    width: auto;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
-}
-
-
-.busca {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-
-}
-
-.busca input {
-    width: 500px;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 15px;
-
-}
-
-.txtBusca {
-    text-align: center;
-    font-size: 23px;
-    margin-left: 30px;
-
-}
-
-.icon-busca {
-    width: 40px;
-    height: auto;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-
-.pesquisa {
-    border: none;
-    background: none;
     padding: 0;
-    cursor: pointer;
-    transition: transform 0.1s ease;
+    line-height: 1.6;
 }
 
-.pesquisa:active {
-    transform: scale(0.95);
-}
-
-.livros-destaque {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 80px;
+h1, h2 {
+    font-family: 'Cinzel Decorative', 'UnifrakturCook', serif;
     text-align: center;
-    margin-top: 90px;
-}
-
-.destaque-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px 20px;
-}
-
-.card {
-    border-top: 2px solid #FFFFFF75;
-    border-left: 2px solid #FFFFFF75;
-    box-shadow: 5px 5px 12px #00000035;
-    background: #FFFFFF25;
-    border-radius: 15px;
-    overflow: hidden;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 650px;
-    position: relative;
-    transition: transform 0.3s ease;
-    margin-bottom: 35px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-
-.capa {
-    width: 378px;
-    height: 545px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.titulo {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    margin-top: 10px;
-    font-size: 30px;
-    text-align: center;
-    color: #080808;
-}
-
-.footer {
-    background: rgba(217, 217, 217, 0.45);
-    display: block;
-    border: 1px solid rgba(217, 217, 217, 0);
-    margin-top: 30px;
-}
-
-.footer-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.footer p {
-    margin: 0;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 14px;
-    text-align: center;
+    color: yellow;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px black;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: yellow;
+    transition: color 0.3s;
 }
 
-.logo-bookpage {
+a:hover {
+    color: #f1c40f;
+}
+
+/* CABEÇALHO (HEADER) */
+header {
+    background: black;
+    color: yellow;
+    height: 120px;
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
     position: relative;
 }
 
-.back {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: none;
-    background: none;
-    padding: 0;
-    cursor: pointer;
-    transition: transform 0.1s ease;
-}
-
-.back:hover {
-    transform: scale(0.95);
-}
-
-.logo-center {
+.logo-container {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; 
+    height: 80px;
+    z-index: 10;
+    overflow: hidden;
 }
 
-.logo-page {
-    height: 140px;
-    width: auto;
-    margin-top: 50px;
+.video-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-.seta {
-    height: 20px;
-    width: 20px;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
 }
 
-.container-content {
+.menu-header {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-contato {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.btn-contato:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* SEÇÃO PRINCIPAL (MAIN) */
+main {
+    flex: 1;
     display: flex;
-    gap: 35px;
-    max-width: 1200px;
-    margin: 30px auto;
+    justify-content: center;
     align-items: flex-start;
 }
 
-.content-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+/* CATÁLOGO DE LIVROS */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 40px;
 }
 
-.text-content-titulo {
-    font-size: 60px;
-    line-height: 1.2;
-    color: #000000;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.text-content-descricao {
-    font-size: 33px;
-    line-height: 1.6;
-    color: #333;
-    text-align: justify;
-}
-
-.card-i {
-    background: linear-gradient(#44CCFE, #FBFEA6);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.capa-1 {
-    width: 378px;
-    height: 545px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.card-ii {
-    background: linear-gradient(#300130, #C86F5F);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-
-
-.card-iii {
-    background: linear-gradient(#C93145, #6E333A);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-
-
-.card-iv {
-    background: linear-gradient(#7CC6BF, #046FAA);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-
-
-.card-v {
-    background: linear-gradient(#C0AAD9, #833D96);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-
-
-.card-vi {
-    background: linear-gradient(#26447E, #27473A);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-
-
-.card-vii {
-    background: linear-gradient(#110C08, #444447);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-viii {
-    background: linear-gradient(#F2EFE3, #A89F90);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-ix {
-    background: linear-gradient(#440908, #771B19);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-x {
-    background: linear-gradient(#3A1922, #58363F);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-xi {
-    background: linear-gradient(#1E285D, #C54C57);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-xii {
-    background: linear-gradient(#150C02, #FDB703);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-xiii {
-    background: linear-gradient(#E69149, #F6F5B9);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-xiv {
-    background: linear-gradient(#C40C14, #79090c);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-xv {
-    background: linear-gradient(#A1BD41, #5B467A);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.card-xvi {
-    background: linear-gradient(#7C602F, #2D251D);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 400px;
-    height: 550px;
-    margin-top: 95px;
-    margin-left: 50px;
-}
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-}
-
-.buttons button {
-    padding: 15px 25px;
-    font-size: 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: #C5A29E;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-.buttons button:hover {
-    background-color: #a3746e;
-}
-
-.saida {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 22px;
-    color: #333;
-}
-
-.saida .livro {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* Player de áudio personalizado */
-.audio-player-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #C5A29E;
-    padding: 10px 20px;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-.play-btn {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.progress-container {
-    flex: 1;
-    height: 10px;
-    background: #e4d4d2;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-}
-
-.progress {
-    height: 100%;
-    background: #a3746e;
-    width: 0%;
-    border-radius: 5px;
-}
-
-.audio-player-container span {
-    font-size: 14px;
-}
-
-
-.contato-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    width: 90%;
-    margin: 0 auto;
+.livro {
+    background: #1a1a1a;
+    border: 2px solid yellow;
+    border-radius: 12px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
-.contato-form label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+.livro:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px yellow;
 }
 
-
-.contato-form input,
-.contato-form textarea {
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    width: 100%;
-    box-sizing: border-box;
+.livro img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
+.livro h3 {
+    margin: 10px 0;
+    color: #f5f5f5;
+}
 
-.contato-form button {
-    padding: 15px;
+.separador-catalogo {
     border: none;
-    border-radius: 10px;
-    background-color: #C5A29E;
-    color: white;
-    font-size: 18px;
+    border-top: 1px solid #777;
+    margin: 40px auto;
+    width: 80%;
+}
+
+#detalhes {
+    display: none; 
+}
+
+/* BOTÕES */
+.btn-detalhes, .btn-voltar, .form-contato button {
+    font-family: 'Cinzel Decorative', serif;
     cursor: pointer;
-    transition: background-color 0.3s;
-    width: 150px;
-    align-self: flex-start;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-detalhes {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-detalhes:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: yellow;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
 }
 
 
-.contato-extra {
-    margin-top: 30px;
-    font-size: 18px;
+/* DETALHES DO LIVRO */
+.capa-grande {
+    max-width: 300px;
+    border: 3px solid yellow;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+#conteudo-livro {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border: 2px solid yellow;
+    border-radius: 12px;
+}
+
+
+/* FORMULÁRIO DE CONTATO */
+#contato {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #111;
+    border: 2px solid yellow;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.5);
+}
+
+#contato h2 {
+    margin-bottom: 20px;
+}
+
+.form-contato {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 600px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-
-.contato-extra a {
-    color: #111111;
-    text-decoration: none;
+.form-contato label {
     font-weight: bold;
+    color: yellow;
+    font-family: 'Cinzel Decorative', serif;
 }
 
-.contato-extra a:hover {
-    color: #584646;
+.form-contato input,
+.form-contato textarea {
+    padding: 12px;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
+.form-contato input:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border: 2px solid #f1c40f;
+    box-shadow: 0px 0px 10px yellow;
+}
 
-.btn-whatsapp {
-    display: inline-block;
-    padding: 10px 16px;
-    background-color: #7bc294;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
+.form-contato button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: yellow;
+    color: black;
     font-weight: bold;
-    transition: background-color 0.3s;
-    width: 140px;
-    text-align: center;
+    font-size: 1.1rem;
 }
 
-.btn-whatsapp:hover {
-    background-color: #78a889;
+.form-contato button:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
+}
+
+
+/* RODAPÉ (FOOTER) */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
