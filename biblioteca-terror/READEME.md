@@ -1,0 +1,7 @@
+A plataforma "Dark Book's" é uma biblioteca digital focada em literatura de terror, criada para centralizar o acesso e facilitar a navegação por um acervo de livros do gênero. O sistema foi desenvolvido com HTML, CSS e JavaScript e está estruturado para oferecer uma experiência de usuário imersiva e personalizada.
+
+O projeto é composto por arquivos como index.html, que atua como ponto de entrada para coletar o apelido do usuário; páginas de conteúdo como biblioteca.html e as páginas dedicadas aos autores stephen-king.html e raphael-montes.html; e os arquivos de estilo (style.css) e lógica (script.js) que gerenciam a interatividade do site. O script.js é responsável por personalizar a saudação de boas-vindas, gerenciar um modal interativo que exibe detalhes dos livros, e controlar a navegação.
+
+As principais funcionalidades incluem a personalização da interface, a organização do acervo por autores específicos e a exibição de informações detalhadas dos livros através de um modal que, em alguns casos, pode incluir arquivos de áudio.
+
+Para o futuro, a plataforma pode ser aprimorada com a criação de uma página de contato e o desenvolvimento de páginas de autor mais completas, além da expansão contínua do acervo de livros.
