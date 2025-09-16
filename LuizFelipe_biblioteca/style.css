@@ -1,0 +1,129 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: #060708;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: #6e6e6e; /* destaque no hover */
+}
+
+header .icon img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+header .icon img:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Página inicial */
+h2 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.livros-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    justify-items: center;
+}
+
+/* livro card */
+.livro {
+    background: #a39a9a9a;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px; /* tamanho fixo pra uniformizar */
+}
+
+.livro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.livro img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Página de detalhes */
+.hidden {
+    display: none;
+}
+
+.detalhes-container {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.detalhes-container img {
+    width: 150px;
+    height: 220px;
+    margin: 1rem 0;
+}
+
+/* Botão voltar */
+#voltar {
+    margin: 1rem 2rem;
+    padding: 0.6rem 1.2rem;
+    background: #2e3b4e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#voltar:hover {
+    background: #f0c674;
+    color: #2e3b4e;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #060708;
+    color: #fff;
+    font-size: 0.9rem;
+}
