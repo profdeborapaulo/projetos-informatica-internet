@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'CarlBrown';
+  src: url('Carl Brown Regular/CarlBrown.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: #fdf6e3;
+  color: #333;
+}
+
+/* Header */
+nav{  
+  background: rgba(255, 228, 196, 0.685);
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;}
+
+.nav__rap {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  height: 50px;
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.header {
+  background: url('img/fundo.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+h3 {
+  font-family: 'CarlBrown', serif;
+  color:white
+  border;
+}
+
+.overlay {
+  background: rgba(255, 228, 196, 0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #2b2b2b;
+}
+
+.mensagem {
+  font-size: 1.2rem;
+}
+
+/* Destaques */
+.destaques {
+  padding: 1rem;
+  text-align: center;
+}
+
+.destaques img {
+  height: 250px;
+  width: 180px;
+  border-radius: 8px;
+}
+
+.destaques p {
+  margin-top: 0.5rem;
+}
+
+/* Autores redondos */
+.autor-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f4e1b0;
+  margin-bottom: 0.5rem;
+}
+
+/* Gêneros quadrados */
+.genero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fffbea;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.genero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.genero-card span {
+  position: absolute;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  bottom: 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Livro */
+.livro-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.capa-livro {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.info-livro {
+  max-width: 600px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4e1b0;
+  margin-top: 2rem;
+}
