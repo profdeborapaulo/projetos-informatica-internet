@@ -1,23 +1,126 @@
-Com base no projeto inicial da Biblioteca "Antônio Furlan", vocês deverão desenvolver um sistema de interfaces web para apresentação de um catálogo com 6 livros destacados na página inicial. O tema para a Biblioteca é livre e a escolha dos livros também. A ideia é que na página principal o leitor tenha acesso as informações básicas de cada exemplar, exemplo: título, autor, isbn, ano de publicação, editora, quantidade de páginas, etc. Ao se interessar por algum desses livros disponíveis, você deverá desenvolver uma lógica que possa direcionar o leitor para uma página que contenha, além das informações básicas, uma imagem da capa em miniatura ou original, sinopse e também um podcast de no máximo 3 minutos verbalizando a sinopse. Assim, o leitor terá a sua disposição a sinopse por leitura e por áudio, onde atenderemos também acessibilidade digital neste requisito. Requisitos Funcionais:
+#  BookClub --- Guia e Documentação
 
-Página Inicial: Exibir 6 livros em destaque com elementos visuais atrativos (capas dos livros em miniatura, títulos, etc.).
+O **BookClub** é uma plataforma virtual para amantes da leitura. O site
+reúne livros, autores e coleções, permitindo que leitores descubram
+obras, conheçam escritores e participem da comunidade literária.
 
-Página de Detalhes do Livro: De acordo com a sua lógica, por exemplo, ao clicar em qualquer livro da página inicial, o usuário deve ser levado a uma página exclusiva que contenha: o Capa original em alta qualidade o Nome do autor o Sinopse detalhada por áudio e texto o Informações adicionais que possam despertar o interesse do leitor (exemplos: ano de publicação, gênero literário, avaliações, citações, etc.)
+Este documento serve como **guia de referência** para uso, manutenção e
+evolução do projeto, garantindo organização e boas práticas no
+desenvolvimento.
 
-Acessibilidade: Para garantir o acesso inclusivo, cada livro deve possuir um podcast com a leitura da sinopse. O áudio deve estar disponível para escuta na página de detalhes do livro.
 
-Mídias adicionais: Além das imagens e áudio, podem ser utilizados vídeos ou outros recursos multimídia para enriquecer a experiência do usuário.
+## Funcionalidades
+Exibição de informações detalhadas dos livros:
+    Nome do livro
+    Autor
+    Sinopse
+    Áudio da sinopse para fins de acessibilidade
+    Layout responsivo e amigável
+    Navegação intuitiva para fácil acesso às obras
+------------------------------------------------------------------------
 
-Requisitos Técnicos:
-• O projeto deverá ser desenvolvido utilizando HTML, CSS e JavaScript puro (sem frameworks obrigatórios, porém, uso de bibliotecas para áudio ou vídeo é permitido). • O código deve ser organizado, bem comentado e com boa estrutura de pastas. • A navegação entre a página inicial e as páginas de detalhes deve ser dinâmica e intuitiva. • O podcast poderá ser criado a partir da leitura da sinopse em ferramentas de texto para fala ou gravação própria.
+##  Executando o Projeto Localmente
 
-Entrega:
-• Criar um repositório no GitHub com o nome especificado para o projeto: github.com/profdeborapaulo (siga as instruções do professor para nomeação e organização). • Enviar todos os arquivos do projeto no repositório (não apenas o link). O repositório deve conter: o Código fonte completo (HTML, CSS, JS) o Arquivos de mídia (imagens, áudios dos podcasts, vídeos, etc.) o O Javascript deverá estar comentado o Um arquivo README.md explicando o funcionamento do projeto, estrutura dos arquivos e instruções para execução local. Ao concluir, insira o link do repositório no teams, para concluir a tarefa pelo teams. 
+### Pré-requisitos
 
-Apresentação:
-Cada aluno deverá apresentar o seu projeto de 5 a 8 minutos.
-Conclusão (1 minuto)
-• Reflexão sobre o Projeto: Explique sobre seu aprendizado, quais desafios encontrados, oportunidades que vislumbra, etc. • Agradecimento e Encerramento: "Agradeço pela oportunidade de compartilhar meu trabalho com vocês e estou à disposição para perguntas."
+-   [VS Code](https://code.visualstudio.com/) ou editor de sua
+    preferência\
+-   Extensão [**Live
+    Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+    instalada no VS Code
 
-É importante falar sobre seu projeto, escolha do seu tema de biblioteca, livros, ordem do seu desenvolvimento, cronograma, dificuldades, etc.
-A entrega deve acontecer no dia 13/09/2025 A apresentação será no dia 15/09/2025
+
+## 📂 Estrutura de Pastas
+
+``` bash
+📁 bookclub/
+ ├── biblioteca.html      # Página inicial
+    ├── livros.html       #Pagína com catologo de livros
+├── autores.html          # Pagína com os autores presente no site
+ ├── autor-Ali.html       # Página dedicada à autora Ali Hazelwood
+ ├── index.html           # Página de contato / cadastro
+    ├── autor.css            # Estilização da página de autores
+        ├── style.css            # Estilização geral
+            ├── mai.js               # Lógica da navegação e animações
+ ├── script.js            # Lógica de formulários
+ ├── /imagens             # Logos, capas e ícones
+ ├── /fontes              # Fontes personalizadas
+ └── README.md            # Este guia
+```
+
+------------------------------------------------------------------------
+
+## 🛠️ Tecnologias Utilizadas
+
+-   **HTML5** → Estrutura e marcação\
+-   **CSS3** → Estilização e responsividade\
+-   **JavaScript (ES6+)** → Interatividade e animações\
+-   **GSAP + ScrollReveal** → Animações de rolagem\
+-   **Animate.css** → Animações pré-definidas\
+-   **Locomotive Scroll** → Efeitos de rolagem suave
+
+------------------------------------------------------------------------
+
+##  Responsividade
+
+O projeto foi desenvolvido para adaptação em diferentes dispositivos: -
+Uso de **Flexbox** e **media queries**\
+- Layout fluido com porcentagens e `rem` ao invés de valores fixos\
+- Testes realizados em mobile, tablet e desktop
+
+------------------------------------------------------------------------
+
+## Manutenção
+
+### 1. **Autores**
+
+As páginas de autores seguem um padrão (`autor-Nome.html` +
+`autor.css`).\
+\> Para adicionar um novo autor, copie o template e ajuste os dados
+(nome, bio, imagem e redes sociais).
+
+### 2. **Livros**
+
+Os livros são exibidos em carrosséis na página `livros.html`.\
+\> Para incluir novos títulos, adicione as imagens no diretório
+correspondente e atualize o HTML.
+
+### 3. **Formulários**
+
+O `index.html` contém formulário de contato e inscrição.\
+\> Validações adicionais podem ser incluídas em `script.js`.
+
+------------------------------------------------------------------------
+
+##  Hospedagem
+
+Você pode publicar o projeto em: - **GitHub Pages** (gratuito e rápido)\
+- **Netlify / Vercel** (deploy automático via Git)\
+- Hospedagem própria, se precisar de back-end futuramente
+
+------------------------------------------------------------------------
+
+##  Contribuição
+
+Caso outras pessoas colaborem: 1. Mantenha o padrão de nomenclatura dos
+arquivos\
+2. Documente novas funções no `mai.js` ou `script.js`\
+3. Use commits claros e descritivos\
+4. Atualize o README sempre que houver mudanças significativas
+
+------------------------------------------------------------------------
+
+##  Changelog
+
+  Data      Alteração
+  --------- ----------------------------------
+  2025-09   Criação do guia de documentação
+  2025-08   Inclusão de carrosséis de livros
+  2025-07   Página dedicada a autores
+
+------------------------------------------------------------------------
+
+##  Acessibilidade
+
+-   Todas as imagens possuem `alt` descritivo\
+-   Navegação otimizada para teclado e leitores de tela
