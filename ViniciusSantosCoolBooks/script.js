@@ -68,52 +68,6 @@ botaoAnterior.addEventListener("click", () =>{
   }
 });
 
-//funcionalidade do player de audio
-
-let audioAtual = null; //armazena o audio que está tocando
-
-const playersDeAudio = document.querySelectorAll(".audio-player"); //seleciona todos os players de audio
-
-//adiciona evento de clique a cada player de audio
-playersDeAudio.forEach(player => {
-  const botaoReproduzirPausar = player.querySelector(".audio-button");
-  const statusAudio = player.querySelector(".audio-status");
-  const audio = player.querySelector("audio");
-
-  //adiciona evento de clique ao botão de reproduzir/pausar
-  botaoReproduzirPausar.addEventListener("click", () => {
-    // Se um áudio diferente estiver tocando, pause-o e resete seu botão.
-    if (audioAtual && audioAtual !== audio) {
-      const playerAnterior = audioAtual.closest(".audio-player");
-      if (playerAnterior) {
-        audioAtual.pause();
-        playerAnterior.querySelector(".audio-button").textContent = "▶";
-        playerAnterior.querySelector(".audio-status").textContent = "Ouvir Resumo";
-      }
-    }
-
-    // Alterna o estado de play/pause para o áudio clicado.
-    if (audio.paused) {
-      audio.play();
-      botaoReproduzirPausar.textContent = "||";
-      statusAudio.textContent = "Pausar Resumo";
-      audioAtual = audio; // Define este como o áudio que está tocando.
-    } else {
-      audio.pause();
-      botaoReproduzirPausar.textContent = "▶";
-      statusAudio.textContent = "Ouvir Resumo";
-      audioAtual = null; // Reseta, pois nenhum áudio está tocando ativamente.
-    }
-  });
-
-  // Garante que o botão volte ao estado inicial quando o áudio terminar
-  audio.addEventListener('ended', () => {
-// ...existing code...
-    statusAudio.textContent = "Ouvir Resumo";
-    audioAtual = null;
-  });
-});
-
 //essa array cria o "objeto" que representa cada livro para que a informação seja exposta na pagina através de um lint (url)
 let livros = [
   {
@@ -126,7 +80,8 @@ let livros = [
     ano: "2009",
     editora: "Companhia das Letras",
     paginas: "416",
-    resenha_video: "https://www.youtube.com/embed/c6mK3xJ1G2Q"
+    resenha_video: "https://www.youtube.com/embed/c6mK3xJ1G2Q",
+    audio: "audio/1984-resumo.mp3"
   },
   {
     id: "2",
@@ -138,7 +93,8 @@ let livros = [
     ano: "2015",
     editora: "L&PM",
     paginas: "472",
-    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y"
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+     audio: "audio/sapiens.mp3"
   },
   {
     id: "3",
@@ -150,7 +106,8 @@ let livros = [
     ano: "2015",
     editora: "Agir",
     paginas: "96",
-    resenha_video: "https://www.youtube.com/embed/rR9wWzD49-U"
+    resenha_video: "https://www.youtube.com/embed/rR9wWzD49-U",
+    audio: "audio/pequeno.mp3"
   },
   {
     id: "4",
@@ -162,7 +119,8 @@ let livros = [
     ano: "1980",
     editora: "Jardim dos Livros",
     paginas: "160",
-    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y"
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+    audio:"audio/arte-guerra.mp3"
   },
   {
     id: "5",
@@ -174,7 +132,8 @@ let livros = [
     ano: "2003",
     editora: "Arqueiro",
     paginas: "432",
-    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y"
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+    audio: "audio/codigo.mp3"
   },
   {
     id: "6",
@@ -186,7 +145,8 @@ let livros = [
     ano: "1979",
     editora: "Suma de Letras",
     paginas: "208",
-    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y"
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+    audio: "audio/oguia.mp3"
   },
   {
     id: "7",
@@ -198,7 +158,9 @@ let livros = [
     ano: "1992",
     editora: "Rocco",
     paginas: "576",
-    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y"
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+    audio: "audio/mulher.mp3"
   },
   {
     id: "8",
@@ -210,7 +172,8 @@ let livros = [
     ano: "1954",
     editora: "HarperCollins",
     paginas: "1200",
-    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y"
+    resenha_video: "https://www.youtube.com/embed/yPjJqfJ2M7Y",
+    audio: "audio/senhor.mp3"
   },
 ];
 const livrosCards = document.querySelectorAll(".livro-destaque-card, .book-card");
