@@ -1,0 +1,88 @@
+.livro { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: wheat;
+  border-radius: 5%;
+  backdrop-filter: drop-shadow(30%);
+}
+
+.livro img{
+  width: 40%;
+  border: 50%;
+  border-color: lightcyan;
+  border-radius: 5%;
+  backdrop-filter: drop-shadow(10%);
+}
+.livro p{
+  padding: 30px;
+  background-color: whitesmoke;
+  border-radius: 10%
+}
+.livro audio{
+  display: flex;
+  align-self: flex-end;
+  
+}
+
+body{
+  background-color: lightblue;
+  padding: 0;
+  margin:0;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-grow: 1;
+  display: center;
+  
+}
+
+nav {
+  position: fixed;
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 5%;
+  margin-bottom: auto;
+  align-content: row;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  
+}
+
+nav a:hover{
+  background-color: lightblue;
+}
+footer{
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  background-color: lightseagreen;
+  border-radius: 5%;
+  margin-top: auto;
+  padding:20px;
+}
+
+.slider{
+  position:relative;
+  width:30%;
+}
+.slider-content{
+  display: flex;
+  flex-wrap:nowrap;
+}
+.slide-quincas{
+  width:20%;
+}
