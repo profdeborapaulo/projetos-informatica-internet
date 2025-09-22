@@ -78,11 +78,11 @@ function exibirCatalogo() {
     });
 }
 
-// Chame a função assim que a página carregar, em vez de usar um botão.
-// Coloque isso no final do seu arquivo biblioteca.js
+// Chame a função assim que a página carregar, em vez de usar um botão
 window.onload = function() {
     // Verifica se o elemento 'catalogo' existe na página atual antes de chamar a função
     if (document.getElementById("catalogo")) {
         exibirCatalogo();
     }
 };
+
