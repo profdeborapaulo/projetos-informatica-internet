@@ -62,6 +62,25 @@ header .icon img:hover {
     transform: scale(1.2) rotate(10deg);
 }
 
+.anel-frase {
+    font-family: 'FonteTitulo', 'Times New Roman', Times, serif;
+    font-size: 1rem;              
+    color: transparent;          
+    text-align: center;
+    margin-top: 0.3rem;
+    transition: all 0.8s ease;     
+    text-shadow: none;
+    pointer-events: none;          
+    user-select: none;
+}
+
+header:hover .anel-frase {
+    color: #daa520; 
+    text-shadow: 0 0 8px #daa520, 0 0 15px #ffec8b;
+    letter-spacing: 1px;
+}
+
+
 h2 {
     text-align: center;
     margin: 1.5rem 0;
