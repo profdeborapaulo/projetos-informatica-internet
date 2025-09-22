@@ -11,131 +11,60 @@
 
 <body>
 
-  <header>
-    <nav class="nav bd-grid">
-      <a href="#" class="nav__rap">
-        <img src="img/logo1.png" alt="Logo" class="nav__rap" />
-      </a>
+  <header class="barra">
+  <div class="header--container">
+    <div class="logo">
+      <a href="index.html">OndaLibri</a>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#carrossel-destaques">Destaques</a></li>
+        <li><a href="index.html#carrossel-autores">Autores</a></li>
+        <li><a href="index.html#carrossel-generos">Gêneros</a></li>
+      </ul>
     </nav>
+  </div>
   </header>
 
   <!-- Header -->
    <header class="header">
     <div class="overlay">
-      <h3 class="logo">OndaLibri</h1>
+      <h1 class="logo">OndaLibri</h1>
       <p class="mensagem">"Os livros são navios que viajam através dos mares da imaginação." - George W. Curtis </p>
     </div>
   </header>
 
   <!-- Carrossel de Livros -->
-  <section class="destaques">
+  <section class="destaques" id="carrossel-destaques">
     <h2>Livros em Destaque</h2>
     <div class="swiper">
       <div class="swiper-wrapper">
-        
-        <!-- Livro 1 -->
-        <div class="swiper-slide">
-          <a href="livro.html?id=1">
-            <img src="img/Jurassic_Park.jpg" alt="Livro 1">
-            <p>Jurassic Park</p>
-          </a>
-        </div>
-
-        <!-- Livro 2 -->
-        <div class="swiper-slide">
-          <a href="livro.html?id=2">
-            <img src="img/Fabulas.jpg" alt="Livro 2">
-            <p>Título do Livro 2</p>
-          </a>
-        </div>
-
-        <!-- Livro 3 -->
-        <div class="swiper-slide">
-          <a href="livro.html?id=2">
-            <img src="img/Bill.jpeg" alt="Livro 2">
-            <p>Título do Livro 2</p>
-          </a>
-        </div>
-
-        <!-- Livro 4 -->
-        <div class="swiper-slide">
-          <a href="livro.html?id=2">
-            <img src="img/Gato_Viajante.jpg" alt="Livro 2">
-            <p>Título do Livro 2</p>
-          </a>
-        </div>
-
-        <!-- Livro 5 -->
-        <div class="swiper-slide">
-          <a href="livro.html?id=2">
-            <img src="img/Uivantes.webp" alt="Livro 2">
-            <p>Título do Livro 2</p>
-          </a>
-        </div>
-
-        <!-- Livro 6 -->
-        <div class="swiper-slide">
-          <a href="livro.html?id=2">
-            <img src="img/Algo_Assim.jpg" alt="Livro 2">
-            <p>Título do Livro 2</p>
-          </a>
-        </div>
-        <!-- + até 6 livros -->
       </div>
       <!-- Botões -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
+    </section>
 
-  </section>  <!-- Carrossel de Autores -->
-  <section class="destaques">
-    <h2>Autores</h2>
-    <div class="swiper autores">
-      <div class="swiper-wrapper">
-        <!-- Autor 1 -->
-        <div class="swiper-slide">
-          <a href="autor.html?id=1">
-            <img src="assets/img/autor1.jpg" alt="Autor 1" class="autor-img">
-            <p>Autor 1</p>
-          </a>
-        </div>
-        <!-- Autor 2 -->
-        <div class="swiper-slide">
-          <a href="autor.html?id=2">
-            <img src="assets/img/autor2.jpg" alt="Autor 2" class="autor-img">
-            <p>Autor 2</p>
-          </a>
-        </div>
-      </div>
+
+
+  <section class="autores" id="carrossel-autores">
+    <h2>Autores Populares</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper"></div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
   </section>
 
+
   <!-- Carrossel de Gêneros -->
-  <section class="destaques">
+  <section class="generos" id="carrossel-generos">
     <h2>Gêneros Literários</h2>
     <div class="swiper generos">
-      <div class="swiper-wrapper">
-        <!-- Gênero 1 -->
-        <div class="swiper-slide">
-          <a href="genero.html?id=1">
-            <div class="genero-card">
-              <img src="img/Aventura.png" alt="Ficção">
-              <span>Ficção</span>
-            </div>
-          </a>
-        </div>
-        <!-- Gênero 2 -->
-        <div class="swiper-slide">
-          <a href="genero.html?id=2">
-            <div class="genero-card">
-              <img src="img/fantasia.png" alt="Romance">
-              <span>Romance</span>
-            </div>
-          </a>
-        </div>
-      </div>
+      <div class="swiper-wrapper"><!-- preenchido via JS --></div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
@@ -146,16 +75,9 @@
     <p>&copy; OndaLibri 2025</p>
   </footer>
 
+  <script src="js/livros.js"></script> <!-- dados dos livros -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 3,
-      spaceBetween: 5,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
-  </script>
+  <script src="js/index.js"></script> <!-- popula os carrosséis -->
+
 </body>
 </html>
