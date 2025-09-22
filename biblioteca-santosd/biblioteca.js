@@ -70,7 +70,7 @@ function exibirCatalogo() {
         livroCard.classList.add("livro-card");
         
         livroCard.innerHTML = `
-            <img src="images/${livro.capa}" alt="Capa do livro ${livro.titulo}">
+            <img src="${livro.capa}" alt="Capa do livro ${livro.titulo}">
             <h3>${livro.titulo}</h3>
             <p>${livro.autor}</p>
         `;
@@ -85,4 +85,5 @@ window.onload = function() {
         exibirCatalogo();
     }
 };
+
 
