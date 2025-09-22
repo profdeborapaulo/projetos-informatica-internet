@@ -1,4 +1,13 @@
-/* Reset */
+
+html, body {
+font-size: 18px;
+}
+@font-face {
+    font-family: 'FonteTitulo'; 
+    src: url('fontes/Fontetitulo.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,30 +15,40 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    padding-top: 90px;
     line-height: 1.6;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('img/Imladris3.png') no-repeat center center fixed;
+    background-size: cover;
+
 }
 
-/* Cabeçalho */
 header {
     background: #060708;
-    color: #fff;
+    color: #Daa520;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: fixed;      
+    top: 0;               
+    left: 0;
+    width: 100%;         
+    z-index: 1000;        
 }
 
 header .logo {
-    font-size: 1.8rem;
+    font-family: 'FonteTitulo', sans-serif;
+    font-size: 2.5rem;
     letter-spacing: 2px;
-    transition: color 0.3s ease;
+    transition: color 1.3s ease;
+    
 }
 
 header .logo:hover {
-    color: #6e6e6e; /* destaque no hover */
+    color: #ffeca4;
 }
 
 header .icon img {
@@ -43,30 +62,31 @@ header .icon img:hover {
     transform: scale(1.2) rotate(10deg);
 }
 
-/* Página inicial */
 h2 {
     text-align: center;
     margin: 1.5rem 0;
+    color: #000;
 }
+
+
 
 .livros-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     padding: 1rem 2rem;
     justify-items: center;
 }
 
-/* livro card */
 .livro {
-    background: #a39a9a9a;
+    background:#2f2f2f8c;
     border: 1px solid #ccc;
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 180px; /* tamanho fixo pra uniformizar */
+    width: 180px;
 }
 
 .livro:hover {
@@ -80,18 +100,18 @@ h2 {
     object-fit: cover;
 }
 
-/* Página de detalhes */
 .hidden {
     display: none;
 }
 
 .detalhes-container {
     padding: 2rem;
-    background: #fff;
+    background: #2f2f2f8c;
     margin: 1rem 2rem;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #2d2d2d;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center; 
 }
 
 .detalhes-container img {
@@ -100,11 +120,11 @@ h2 {
     margin: 1rem 0;
 }
 
-/* Botão voltar */
 #voltar {
+    font-family: 'Times New Roman', Times, serif;
     margin: 1rem 2rem;
     padding: 0.6rem 1.2rem;
-    background: #2e3b4e;
+    background: #212121ab;
     color: white;
     border: none;
     border-radius: 6px;
@@ -113,12 +133,94 @@ h2 {
 }
 
 #voltar:hover {
-    background: #f0c674;
+    background: #Daa520;
     color: #2e3b4e;
     transform: scale(1.05);
 }
 
-/* Rodapé */
+
+/* ===== Tolkien Container ===== */
+.tolkien-container {
+    padding: 2rem;
+    margin: 1rem 2rem;
+    background: #2f2f2f8c;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+
+.tolkien-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000000; 
+}
+
+
+.tolkien-content {
+    display: flex;
+    flex-direction: column;      
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tolkien-img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.tolkien-text p {
+    max-width: 600px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #ffffff;  
+}
+
+
+.tolkien-audio {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.tolkien-audio p {
+    margin-bottom: 0.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .tolkien-content {
+        flex-direction: row;     
+        justify-content: center;
+    }
+
+    .tolkien-text p {
+        margin-left: 1.5rem;
+    }
+}
+
+header nav {
+    margin-left: auto; 
+    margin-right: 1rem;
+}
+
+header nav a {
+    color: #Daa520;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background: #Daa520;
+    color: #060708;
+}
+
 footer {
     text-align: center;
     padding: 1rem;

@@ -6,8 +6,8 @@ const livros = [
         genero: "Fantasia Épica",
         paginas: 1202,
         capa: "img/LOTR_Part1.png",
-        sinopse: "Uma jornada épica pela Terra-média para destruir o Um Anel.",
-        audio: "audio/sinopse1.mp3"
+        sinopse: "Ambientado na vasta e antiga Terra-média, O Senhor dos Anéis acompanha a jornada de um grupo improvável em uma missão que pode decidir o destino de todo o mundo. Entre reinos, florestas élficas, montanhas sombrias e cidades lendárias, a história explora amizade, coragem e sacrifício em meio a uma batalha eterna entre luz e trevas. É uma aventura épica de heroísmo e esperança que conquista leitores há gerações.",
+        audio: "audios/LOTR_Sinopse.mp3"
     },
     {
         titulo: "O Hobbit",
@@ -16,8 +16,8 @@ const livros = [
         genero: "Fantasia Épica",
         paginas: 336,
         capa: "img/TheHobbit.png",
-        sinopse: "A aventura de Bilbo Bolseiro em busca do tesouro guardado por Smaug.",
-        audio: "audio/sinopse2.mp3"
+        sinopse: "Antes da grande guerra pelo destino da Terra-média, um hobbit pacato é arrastado para uma jornada inesperada em busca de um tesouro guardado por um dragão. Entre perigos, encontros mágicos e novos amigos, ele descobre coragem e habilidades que jamais imaginou possuir.",
+        audio: "audios/TheHobbit.mp3"
     },
     {
         titulo: "O Silmarillion",
@@ -26,8 +26,8 @@ const livros = [
         genero: "Mitologia/Fantasia",
         paginas: 480,
         capa: "img/OSilmarillion.png",
-        sinopse: "Histórias da criação do mundo e das primeiras eras da Terra-média.",
-        audio: "audio/sinopse3.mp3"
+        sinopse: "Uma coletânea de mitos e lendas que narra a criação da Terra-média e as antigas guerras entre luz e escuridão. É a base para todos os acontecimentos posteriores, revelando deuses, heróis e tragédias que moldaram o mundo de Tolkien.",
+        audio: "audios/OSilmarillion.mp3"
     },
     {
         titulo: "Beren e Lúthien",
@@ -35,9 +35,9 @@ const livros = [
         ano: "2017",
         genero: "Fantasia/Romance",
         paginas: 288,
-        capa: "img/placeholder4.jpg",
-        sinopse: "O amor proibido entre o homem mortal Beren e a elfa imortal Lúthien.",
-        audio: "audio/sinopse4.mp3"
+        capa: "img/Beren_Luthien.png",
+        sinopse: "Uma das histórias de amor mais lendárias da Terra-média, onde coragem e sacrifício se entrelaçam em uma missão quase impossível. Beren, um mortal, e Lúthien, uma elfa imortal, desafiam poderes sombrios em nome de um amor que transcende mundos.",
+        audio: "audios/Beren_Luthien.mp3"
     },
     {
         titulo: "Os Filhos de Húrin",
@@ -45,9 +45,9 @@ const livros = [
         ano: "2007",
         genero: "Fantasia/Tragédia",
         paginas: 320,
-        capa: "img/placeholder5.jpg",
-        sinopse: "A trágica história de Túrin Turambar e sua irmã Niënor, amaldiçoados por Morgoth.",
-        audio: "audio/sinopse5.mp3"
+        capa: "img/OsFilhosDeHurin.png",
+        sinopse: "Um conto de bravura e tragédia que acompanha a família de Húrin em meio à guerra contra forças ancestrais. Destino, honra e escolhas difíceis marcam a vida de Túrin Turambar, um dos heróis mais complexos das lendas élficas.",
+        audio: "audios/FilhosDeHurin.mp3"
     },
     {
         titulo: "A Queda de Númenor",
@@ -55,20 +55,20 @@ const livros = [
         ano: "2022",
         genero: "Fantasia/História",
         paginas: 400,
-        capa: "img/placeholder6.jpg",
-        sinopse: "O épico relato da ascensão e queda da grande ilha de Númenor.",
-        audio: "audio/sinopse6.mp3"
+        capa: "img/AQuedaDeNumenor.png",
+        sinopse: "Relata a ascensão e a ruína da grande ilha de Númenor, a mais poderosa civilização dos homens. Um épico sobre ambição, orgulho e a luta contra limites impostos pelos próprios deuses, que ecoa nas eras seguintes da Terra-média.",
+        audio: "audios/AQuedaDeNumenor.mp3"
     }
 ];
 
-// Seletores
+//Seletores
 const livrosContainer = document.getElementById("livros");
 const paginaInicial = document.getElementById("pagina-inicial");
 const paginaDetalhes = document.getElementById("pagina-detalhes");
 const detalhesContainer = document.getElementById("detalhes");
 const voltarBtn = document.getElementById("voltar");
 
-// Renderiza os livros na página inicial
+
 livros.forEach((livro, index) => {
     const div = document.createElement("div");
     div.classList.add("livro");
@@ -81,7 +81,7 @@ livros.forEach((livro, index) => {
     livrosContainer.appendChild(div);
 });
 
-// Mostra detalhes do livro selecionado
+
 function mostrarDetalhes(index) {
     const livro = livros[index];
     detalhesContainer.innerHTML = `
@@ -101,7 +101,7 @@ function mostrarDetalhes(index) {
     paginaDetalhes.classList.remove("hidden");
 }
 
-// Botão de voltar
+
 voltarBtn.addEventListener("click", () => {
     paginaInicial.classList.remove("hidden");
     paginaDetalhes.classList.add("hidden");

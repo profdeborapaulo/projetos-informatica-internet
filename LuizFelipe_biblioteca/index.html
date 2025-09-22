@@ -7,33 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="logo">The Scrolls of Imladris</h1>
-        <div class="icon">
-            <img src="img/TheOneRing_icon.png" alt="Ícone da biblioteca">
-        </div>
-    </header>
+   <header>
+    <h1 class="logo">The Scrolls of Imladris</h1>
 
-    <!-- Página Inicial -->
+    <nav>
+        <a class="menu-btn" href="Tolkien.html">Sobre o Autor</a>
+    </nav>
+
+    <div class="icon">
+        <img src="img/TheOneRing_icon.png" alt="Ícone da biblioteca">
+    </div>
+</header>
     <main id="pagina-inicial">
         <h2>Livros em Destaque</h2>
         <div class="livros-container" id="livros">
-            <!-- Os livros serão carregados via JS -->
         </div>
     </main>
-
-    <!-- Página de Detalhes -->
     <section id="pagina-detalhes" class="hidden">
         <button id="voltar">⬅ Voltar</button>
         <div class="detalhes-container" id="detalhes">
-            <!-- Detalhes do livro serão exibidos aqui -->
         </div>
     </section>
-
 <footer>
     <p>&copy; 2025 Luiz Felipe. The Scrolls of Imladris - Todos os direitos reservados.</p>
 </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
