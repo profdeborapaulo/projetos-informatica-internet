@@ -16,8 +16,8 @@ window.onload = function() {
         // Insere o HTML com as informações do livro
         detalhesContainer.innerHTML = `
             <div class="detalhe-capa-container">
-                <img src="images/${livro.capa}" alt="Capa do livro ${livro.titulo}">
-                <div class="play-icon">&#9658;</div> <audio id="audio-sinopse" src="audio/${livro.audio}"></audio>
+                <img src="${livro.capa}" alt="Capa do livro ${livro.titulo}">
+                <div class="play-icon">&#9658;</div> <audio id="audio-sinopse" src="${livro.audio}"></audio>
             </div>
             <div class="detalhe-info">
                 <h2>${livro.titulo}</h2>
@@ -67,4 +67,5 @@ window.onload = function() {
         // Se não encontrar o livro, mostra uma mensagem de erro
         document.getElementById("detalhes-livro-container").innerHTML = "<p>Livro não encontrado!</p>";
     }
+
 };
