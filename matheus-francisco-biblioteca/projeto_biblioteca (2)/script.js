@@ -1,7 +1,7 @@
 let biblioteca = {
     nome: "Biblioteca Novo Mundo",
     endereco: "Rua Piraporão, 1000",
-    livros:[
+    livro:[
         {
             titulo: "Dom Casmurro",
             autor: "Machado de Assis",
@@ -17,10 +17,25 @@ let biblioteca = {
             autor: "Clarice Lispector",
             ano: 1988
         },
+        {
+           
+            titulo: "Descoberta do Mundo",
+            autor: "Clarice Lispector",
+            ano: 1988 
+        },
+        {
+        titulo: "Sentimento do Mundo",
+        autor: "Carlos Drummond de Andrade",
+        ano: 1940
+        },
+        {
+        titulo: "Alguma Poesia",
+        autor: "Carlos Drummond de Andrade",
+        ano: 1935
+        }
     ]
 }
 
-    //console.log(biblioteca)
     function mostrarLivros() {
         const div= document.getElementById("saida");
         div.innerHTML= `<h2> ${biblioteca.nome} </h2>
@@ -30,8 +45,8 @@ let biblioteca = {
         biblioteca.livros.forEach(function(livro){
             div.innerHTML +=
             `<div class="livro">` + 
-            `<strong> Título: </strong>` + livro.titulo + `<br> ` + 
-            `<strong> Autor: </strong>` + livro.autor + `<br> ` +
+            `<strong> Título: </strong>` + livros.titulo + `<br> ` + 
+            `<strong> Autor: </strong>` + livros.autor + `<br> ` +
             `<strong> Ano de Publicação: </strong>` + livro.ano + `<br> ` +
             `</div>` + `<br>`;
             });
@@ -43,26 +58,9 @@ let biblioteca = {
             <p><strong>Ano:</strong> ${livro.ano}</p>
         `;
         track.appendChild(slide);
-    });
+    ;
 
     const slides = Array.from(track.children);
     const slideWidth = slides[0].getBoundingClientRect().width;
     let currentIndex = 0;
 
-    // 2. Função para mover o carrossel
-    const moveToSlide = (targetIndex) => {
-        track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
-        currentIndex = targetIndex;
-    }
-
-    // 3. Event Listeners para os botões
-    prevButton.addEventListener('click', () => {
-        const newIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
-        moveToSlide(newIndex);
-    });
-
-    nextButton.addEventListener('click', () => {
-        const newIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
-        moveToSlide(newIndex);
-    });
-});

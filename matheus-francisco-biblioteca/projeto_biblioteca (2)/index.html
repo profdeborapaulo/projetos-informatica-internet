@@ -1,41 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Biblioteca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
-  <nav>
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="#contato">Sobre Nós</a></li>
-  </ul>
-</nav>
 <body>
-
-        <h1>Biblioteca Novo Mundo</h1>
-
-    <main>
-        <h2>Nossos Livros</h2>
-        <div class="slider">
-  <div class="slider-content">
-    <div class="slide-item">
-      <img class="slide-quincas" src="img/quincas-borba.webp" alt="Slide 1">
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#contato">Sobre Nós</a></li>
+        </ul>
     </div>
-    <div class="slide-item">
-      <img src="img/alguma-poesia.jpg" alt="Slide 2">
-    </div>
-    <div class="slide-item">
-      <img  src="img/descoberta-do-mundo.jpg" alt="Slide 3">
-    </div>
-  </div>
-    </main>
+</nav>
 
-    <footer>
-        <p>Rua Piraporão, 1000</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+<header>
+    <h1>Biblioteca Novo Mundo</h1>
+</header>
+
+<main>
+    <div class="container">
+        <section class="book-showcase">
+            <h2>Nossos Livros em Destaque</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="img/quincas-borba.webp" alt="Capa do livro Quincas Borba">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/alguma-poesia.jpg" alt="Capa do livro Alguma Poesia">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/descoberta-do-mundo.jpg" alt="Capa do livro A Descoberta do Mundo">
+                </div>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button onclick="mostrarLivros()">Mostrar Todos os Livros</button>
+            <div id="saida"></div>
+        </section>
+    </div>
+</main>
+
+<footer id="contato">
+    <p>Rua Piraporão, 1000</p>
+</footer>
+<script src="script.js"></script>
+
